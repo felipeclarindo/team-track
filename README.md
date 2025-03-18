@@ -1,50 +1,44 @@
 🌍 [Leia em Português](README.pt-BR.md)
 
+# Team Track
 
-# <Title>
-
-<description>
+Application to manage the team developed with `.Net` using `C#`.
 
 ## Technologies Used
 
-- `<Technology>` - <description>
-- `<Technology>` - <description>
-- `<Technology>` - <description>
-- `<Technology>` - <description>
-
-## Features
-
-- <Feature1>
-- <Feature2>
-- <Feature3>
-- <Feature4>
+- `.Net` - Create and manage dependencies of the project.
+- `C#` - Language to development.
 
 ## Steps to install and run
 
 1. Clone the Repository:
 
 ```bash
-git clone https://github.com/felipeclarindo/<projectname>.git
+git clone https://github.com/felipeclarindo/team-track.git
 ```
 
 2. Enter directory:
 
 ```bash
-cd <projectname>
+cd team-track
 ```
 
-3. Create `Virtual Environment`:
+3. Compile the project:
 
 ```bash
-python -m venv .venv
+dotnet build
 ```
 
-4. Enable `Virtual Environment` by running the `.bat` file in `.venv/Scripts/activate.bat`.
+4. Enter in the build repository:
 
-5. Install dependencies :
+```bash
+cd C:\team-track\app\bin\Debug\net9.0
+```
 
-```bash			
-pip install - r requirements.txt
+5. Run Project:
+
+```bash
+dotnet app.dll
 ```
 
 ## Contribution
