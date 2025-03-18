@@ -1,14 +1,14 @@
+using src.library.AbstractClass;
+
 namespace src.library.Models
 {
-    public class Owner
+    public class Owner : TeamOwner
     {
-        protected List<TeamMember> TeamList;
-
-        public Owner(string name, string department) : base(name, department) {}
+        public Owner(string name, string department, string ownerDetails) : base(name, department, ownerDetails) {}
 
         public override void DisplayInfo()
         {
-            Console.WriteLine($"Manager Info: {Name}")
+            Console.WriteLine($"Manager Info: {Name}");
             Console.WriteLine($"Department: {Department}");
         }
     }

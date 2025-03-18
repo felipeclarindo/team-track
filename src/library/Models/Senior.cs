@@ -2,8 +2,8 @@ using src.library.AbstractClass;
 
 namespace src.library.Models
 {
-    public class Senior : Abstract.TeamMember
+    public class Senior : TeamMember
     {
-        public Senior(string name, int levelExperience, string role, string department) : base(name, levelExperience, role, department) {}
+        public Senior(string name, int levelExperience, string department, string teamMemberDetails) : base(name, levelExperience, department, teamMemberDetails) {}
     }
 }
