@@ -15,6 +15,8 @@ namespace src.app
 
             while (true)
             {
+                ClearTerminal(true);
+
                 string option = MenuOptions();
 
                 switch (option)
@@ -43,7 +45,10 @@ namespace src.app
 
         static string MenuOptions()
         {
-            Console.WriteLine("\n--- Team Track ---");
+            ClearTerminal();
+            Console.WriteLine("------------------------");
+            Console.WriteLine("------ Team Track ------");
+            Console.WriteLine("------------------------");
             Console.WriteLine("1. Add Member");
             Console.WriteLine("2. List Members");
             Console.WriteLine("3. View Member");
@@ -57,6 +62,8 @@ namespace src.app
 
         static Owner RegisterOwner()
         {
+            ClearTerminal();
+
             Console.WriteLine("Enter Owner's information:");
 
             Console.Write("Owner name: ");
@@ -82,6 +89,8 @@ namespace src.app
 
         static void RegisterMember()
         {
+            ClearTerminal();
+
             Console.WriteLine("Enter Team Member's information:");
 
             Console.Write("Name: ");
@@ -118,7 +127,10 @@ namespace src.app
 
         static void ListMembers()
         {
-            Console.WriteLine("\n--- Team Members ---");
+            ClearTerminal();
+            Console.WriteLine("--------------------------");
+            Console.WriteLine("------ Team Members ------");
+            Console.WriteLine("--------------------------");
             if (TeamMembers.Count == 0)
             {
                 Console.WriteLine("No members to display.");
@@ -134,6 +146,8 @@ namespace src.app
 
         static void ViewMember()
         {
+            ClearTerminal();
+            
             ListMembers();
 
             Console.WriteLine("Enter the name of the member you want to view:");
@@ -156,6 +170,21 @@ namespace src.app
             {
                 Console.WriteLine("Name and details are required and can't be empty!");
             }
+        }
+        
+        static void ClearTerminal(bool initialClear = false)
+        {
+            if (initialClear)
+            {
+
+                Console.WriteLine("-----------------------------------");
+                Console.WriteLine("------ Welcome to Team Track ------");
+                Console.WriteLine("-----------------------------------");
+                Console.WriteLine("Press any key to continue...");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            Console.Clear();
         }
     }
 }
